@@ -1,17 +1,38 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>login</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body style="height: 228px; ">
-        <br />
-        <form method="get" action="http://localhost:8081/Store/rest/login">
-            email: <input type="text" name="email" id="email" /><br />
-            password: <input type="password" name="password" id="password" /><br />
-           
-           
-            <input type="submit" value="Submit" />
-        </form>
-    </body>
+<head>
+<title> check for Empty Strings </title>
+<meta charset = "utf-8">
+<meta name = "author" content = "Ralph Phillips">
+<script>
+
+
+
+function required(fname,lname){
+if(fname.value.length ==0 && lname.value.length==0){
+window.alert("error!2");
+return false;
+
+}else{return true;}
+
+}
+
+
+
+</script>
+<body>
+<h1> check for Empty  Strings </h1>
+<form method = "post"  action = "www.google.bg" onsubmit ="return required(fname,lname)">
+<Fieldset>
+<label> Frist Name:
+<input  type = "text" id = "fname"></lable>
+<br>
+<label> Last Name:
+<input  type = "text" id = "lname"></lable>
+<br>
+<input type = "submit" value  = "send data">
+
+<Fieldset>
 </html>
+</form>
+
+</body>

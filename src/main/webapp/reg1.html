@@ -1,0 +1,13 @@
+<form action="formpost.php" method="POST" onsubmit="return validateCreditCardForm()">
+   ...
+</form>
+
+function validateCreditCardForm(){
+    var result = false;
+    if (($('#billing-cc-exp').val().length > 0) &&
+        ($('#billing-cvv').val().length  > 0) &&
+        ($('#billing-cc-number').val().length > 0)) {
+            result = true;
+    }
+    return result;
+}

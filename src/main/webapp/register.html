@@ -1,12 +1,47 @@
-﻿<p>&nbsp;</p>
+﻿<script>
+
+function required(name,secondname,email,password,address){
+name.style.borderColor = "white";
+secondname.style.borderColor = "white";
+email.style.borderColor = "white";
+password.style.borderColor = "white";
+address.style.borderColor = "white";
+if(name.value.length ==0){
+window.alert(" Моля попълнете полето в червено!(име) ");
+//document.getElementById("name").style.borderColor = "red";
+name.style.borderColor = "red";
+return false;
+}else if(secondname.value.length==0){
+alert("secondname")
+secondname.style.borderColor = "red";
+return false;
+}else if(email.value.length==0){
+alert("email")
+email.style.borderColor = "red";
+return false;
+}else if(password.value.length==0){
+alert("password")
+password.style.borderColor = "red";
+return false;
+}else if(address.value.length==0){
+alert("address")
+address.style.borderColor = "red";
+return false;
+}
+return true;
+}
+
+
+</script>
 <p>&nbsp;</p>
-<form action="http://localhost:8081/Store/rest/register" method="post">
+<p>&nbsp;</p>
+<form action="http://localhost:8081/Store/rest/register" method="post" onsubmit="return required(name,secondname,email,password,address)">
 <p style="text-align: center;"><em>&nbsp; &nbsp; Име </em> : &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="name" name="name" type="text" /></p>
 <p style="text-align: center;"><br />&nbsp; &nbsp; Презиме :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="secondname" name="secondname" type="text" /></p>
 <p style="text-align: center;"><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email :&nbsp; &nbsp; &nbsp;<input id="email" name="email" type="text" /></p>
 <p style="text-align: center;"><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Парола :&nbsp;&nbsp;&nbsp;&nbsp; <input id="password" name="password" type="password" /></p>
 <p style="text-align: center;"><br /> Адрес :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="address" name="address" type="address" /></p>
-<p style="text-align: center;"><br /> <input type="submit" value="Submit" /></p>
+<p style="text-align: center;"><br /> <input type="submit" name="submit" id="submit" value="Регистрирай"/></p>
 <p style="text-align: center;">&nbsp;</p>
 <p style="text-align: center;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWJSt0Fk_QF3jVuBJaAoyLsLjxG297f_FziYYRvV2vQHSg9rXamg" alt="дюнер" width="328" height="154" /></p>
 </form>
